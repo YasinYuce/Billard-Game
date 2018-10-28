@@ -53,10 +53,10 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Utilities\GameEvent\Editor\GameEventCustomInspector.cs" />
  <Reference Include="UnityEditor.StandardEvents">
- <HintPath>C:/Users/Dwbn.Eham/Desktop/Demo For InGame Group/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+ <HintPath>C:/Users/Dwbn.Eham/Desktop/BillardGame/Billard-Game/Demo For InGame Group/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>
  <Reference Include="Unity.PackageManagerUI.Editor">
- <HintPath>C:/Users/Dwbn.Eham/Desktop/Demo For InGame Group/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+ <HintPath>C:/Users/Dwbn.Eham/Desktop/BillardGame/Billard-Game/Demo For InGame Group/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Users/Dwbn.Eham/Desktop/Programs/Unity Collection/Unity 2018.1.0f2/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

@@ -9,6 +9,9 @@ public class GameHittingState : IGameState
 	private GameEvent_Bool timerStartStopEvent = null;
 
 	[SerializeField]
+	private GameEvent_Float ballCollisionEvent = null;
+
+	[SerializeField]
 	private HitStrengthBar strengthBar = null;
 
 	[SerializeField]
@@ -30,10 +33,14 @@ public class GameHittingState : IGameState
 		if (Input.GetKeyUp (hitKeyCode)) {
 			Vector3 force = (GameManager.Instance.gameMode.Player.position - GameManager.Instance.MainCamera.position);
 			force.y = 0f;
-			force = force.normalized * MaxHitLength * strengthBar.Value;
+			float barValue = strengthBar.Value;
+			force = force.normalized * MaxHitLength * barValue;
 
 			GameManager.Instance.gameMode.Player.GetComponent<Rigidbody> ().AddForce (force);
+
 			BallHitByPlayerEvent.Raise ();
+			ballCollisionEvent.Raise (barValue);
+
 			gameMode.SetTableState (offset, force);
 			SetNextState ();
 			return;

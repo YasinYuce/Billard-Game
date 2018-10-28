@@ -366,6 +366,7 @@ MonoBehaviour:
     type: 2}
   timerStartStopEvent: {fileID: 11400000, guid: 7d795ad3efd45184cb28b169fb499316,
     type: 2}
+  ballCollisionEvent: {fileID: 11400000, guid: e8651630949e5ff48acc2a2c02da14c0, type: 2}
   strengthBar: {fileID: 1152091086}
   hitKeyCode: 32
 --- !u!114 &39637431
@@ -2366,6 +2367,7 @@ GameObject:
   - component: {fileID: 1334717203}
   - component: {fileID: 1334717201}
   - component: {fileID: 1334717204}
+  - component: {fileID: 1334717205}
   m_Layer: 0
   m_Name: SoundManager
   m_TagString: Untagged
@@ -2566,6 +2568,34 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1334717200}
         m_MethodName: BallCollision
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: GameEventListener_Float+FloatSerializableUnityEvent, Assembly-CSharp,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+--- !u!114 &1334717205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1334717198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06c30b6626f961b419b54d1e3f6e2055, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: e8651630949e5ff48acc2a2c02da14c0, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1334717200}
+        m_MethodName: BallCollisionByPlayer
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

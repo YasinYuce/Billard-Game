@@ -21,13 +21,25 @@ public class SoundManager : MonoBehaviour
 	public void BallCollision(float impulse){
 		if (!source.enabled)
 			return;
+
+		source.volume = currentVolume * Mathf.Clamp (impulse, 0f, 3f) / 3f;
+
+		playBallCollisionSfx ();	
+	}
+
+	void playBallCollisionSfx ()
+	{
+		if (source.volume < 0.08f)
+			source.volume = 0.08f;
+
 		source.Stop ();
-
-		float volume = currentVolume * Mathf.Clamp (impulse, 0f, 3f) / 3f;
-		source.volume = volume < 0.08f ? 0.08f : volume;
-
 		source.clip = ballCollisionSfx;
 		source.Play ();
+	}
+
+	public void BallCollisionByPlayer (float ratio){
+		source.volume = currentVolume * ratio;
+		playBallCollisionSfx ();
 	}
 
 	public void OpenCloseVolume(bool open){
