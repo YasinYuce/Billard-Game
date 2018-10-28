@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 287e0fbfce0d741439f9412508728414, type: 3}
+  m_Name: KarambolInfo
+  m_EditorClassIdentifier: 
+  ballPrefab: {fileID: 4930839361520560, guid: 0b65d033eb976a34b983859a902d4ad2, type: 2}
+  ballInfos:
+  - PositionRatio: {x: 0.25, y: 0, z: 0.375}
+    BallColor: {r: 1, g: 1, b: 1, a: 1}
+    CanBePlayer: 1
+  - PositionRatio: {x: 0.25, y: 0, z: 0.5}
+    BallColor: {r: 1, g: 0.86170727, b: 0.24056602, a: 1}
+    CanBePlayer: 0
+  - PositionRatio: {x: 0.75, y: 0, z: 0.5}
+    BallColor: {r: 1, g: 0.32083452, b: 0.23921567, a: 1}
+    CanBePlayer: 0
